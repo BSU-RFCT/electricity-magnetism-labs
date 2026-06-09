@@ -1,0 +1,118 @@
+\documentclass[a4paper,14pt]{extarticle}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.18}
+\definecolor{lightgray}{gray}{0.9}
+\setmainfont{Times New Roman}
+
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\textbf{Министерство горевания Республики Арстоцки}\\
+\textbf{Бермудский национальный парк}
+
+Факультет карасей и полиэтиленов и так далее
+\vspace{6cm}
+
+\textbf{Нагревательная работа №14}\\
+\textbf{Различные методы сбора клюшек и плющей}
+\end{center}
+
+\vfill
+\begin{flushright}
+Выполнил:\\
+Студентка почему зачем\\
+господи помоги\\
+что что что что\\
+\end{flushright}
+
+\vfill
+\begin{center}
+Ъ, 2026
+\end{center}
+\end{titlepage}
+
+\section*{Цель работы}
+Провести измерения электрических сопротивлений различными методами. Получить практические навыки при работе с простейшими электроизмерительными приборами.
+
+\section*{Метод измерений}
+Измерение сопротивления производится косвенным методом при помощи амперметра $A$ и вольтметра $V$, используя соотношение $R = U/I$. Такой метод называется техническим.
+
+При измерении могут быть использованы две схемы. В схеме А вольтметр измеряет падение напряжения на последовательно соединенных $R_X$ и амперметре. В схеме Б амперметр измеряет суммарный ток через сопротивление и вольтметр. Систематические ошибки учитываются через внутренние сопротивления приборов $R_A$ и $R_V$.
+
+\section*{Обработка результатов и расчетные формулы}
+1. \textbf{Для схемы А (малые сопротивления):}
+$$R' = \frac{U_V}{I_A}, \quad R_X = R' - R_A, \quad \varepsilon = \frac{\Delta R_X}{R_X} \cdot 100\%$$
+
+2. \textbf{Для схемы Б (большие сопротивления):}
+$$\frac{1}{R''} = \frac{I_A}{U_V}, \quad R_X = \frac{U_V \cdot R_V}{I_A R_V - U_V}$$
+
+3. \textbf{Удельное сопротивление (Таблица 3):}
+При диаметре проволоки $d = 0.36$ мм площадь сечения $S = \frac{\pi d^2}{4}$. 
+$$\rho = \frac{R_X \cdot S}{l} = \frac{R_X \cdot \pi d^2}{4l}$$
+
+\section*{Результаты измерений}
+
+\begin{center}
+\small
+\textbf{Таблица 1. Результаты измерений А ($R_A = 0.15$ Ом)}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+№ & $U_V$, В & $I_A$, мА & $R'$, Ом & $R_X$, Ом & $\Delta R_X$, Ом & $\varepsilon$, \% \\ \hline
+1 & 0.35 & 85  & 0.411 & 0.261 & 0.012 & 4.4 \\ \hline
+2 & 0.40 & 95  & 0.421 & 0.271 & 0.012 & 4.4 \\ \hline
+3 & 0.50 & 115 & 0.435 & 0.285 & 0.012 & 4.4 \\ \hline
+4 & 0.60 & 143 & 0.420 & 0.270 & 0.012 & 4.4 \\ \hline
+5 & 0.90 & 211 & 0.430 & 0.280 & 0.012 & 4.4 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\small
+\textbf{Таблица 2. Результаты измерений Б ($R_V = 2500$ Ом)}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+№ & $U_V$, В & $I_A$, мА & $1/R''$ & $R_X$, Ом & $\Delta R_X$, Ом & $\varepsilon$, \% \\ \hline
+1 & 0.5 & 125 & 0.2500 & 4.006 & 0.043 & 1.1 \\ \hline
+2 & 0.6 & 150 & 0.2500 & 4.006 & 0.043 & 1.1 \\ \hline
+3 & 0.7 & 178 & 0.2543 & 3.939 & 0.043 & 1.1 \\ \hline
+4 & 0.8 & 202 & 0.2525 & 3.967 & 0.043 & 1.1 \\ \hline
+5 & 0.9 & 224 & 0.2489 & 4.024 & 0.043 & 1.1 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\small
+\textbf{Таблица 3. Определение удельного сопротивления ($d = 0.36$ мм)}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+№ & $l$, м & $U$, В & $I$, мА & $R_X$, Ом & $\rho$, Ом$\cdot$мм$^2$/м \\ \hline
+1 & 0.20 & 0.30 & 126 & 2.381 & 1.212 \\ \hline
+2 & 0.25 & 0.37 & 126 & 2.937 & 1.196 \\ \hline
+3 & 0.30 & 0.44 & 126 & 3.492 & 1.185 \\ \hline
+4 & 0.35 & 0.52 & 126 & 4.127 & 1.200 \\ \hline
+5 & 0.40 & 0.60 & 126 & 4.762 & 1.213 \\ \hline
+\end{tabular}
+\end{center}
+
+\section*{Вывод}
+В ходе лабораторной работы были освоены косвенные методы измерения электрических сопротивлений. Установлено, что схема А более эффективна для малых сопротивлений, а схема Б — для больших. Среднее удельное сопротивление исследуемого материала составило $\rho_{cp} \approx 1.20$ Ом$\cdot$мм$^2$/м.
+
+\end{document}
